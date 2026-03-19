@@ -1,9 +1,41 @@
 # sudoku
-Intial code
-def input_sudoku():
-    sudomat = []
-    for j in range(9):
-        row = []
+
+## Python solver
+
+Run:
+
+```bash
+python3 sudoku_solver.py
+```
+
+## C solver
+
+Build + run:
+
+```bash
+gcc -std=c11 -O2 sudoku_solver.c -o sudoku_solver
+./sudoku_solver
+```
+
+## Web UI (beautiful)
+
+Run:
+
+```bash
+pip install flask
+python3 sudoku_web.py
+```
+
+Open http://127.0.0.1:5000 and use the interactive Sudoku grid.
+
+## Unit tests (use virtualenv recommended)
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -U pip pytest
+pytest -q
+```
         print('Enter the values of row' + repr(j))
         for i in range(9):
             # x = int(input( ))
